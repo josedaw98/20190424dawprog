@@ -13,7 +13,7 @@ public class Lienzo extends JPanel {
 	private static final long serialVersionUID = 1L;
 	
 	private Shape [] vector;
-	int fallos = 5;
+	int fallos = 0;
 	
 	public Lienzo(int width, int height) {
 		setPreferredSize(new Dimension(width, height));
@@ -34,8 +34,15 @@ public class Lienzo extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		for (int i=0; i<fallos; i++)
+		for (int i=0; i<vector.length; i++) {
+			if (i<fallos) {
+		
+			}
+			else {
+				// seleccionar línea a puntos
+			}
 			((Graphics2D) g).draw(vector[i]);
+		}
 	}
 	
 }
